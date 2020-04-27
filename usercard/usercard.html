@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Rubik" rel="stylesheet">
+    <title>User Card</title>
+    <style>
+        :root{
+            --btn-clr:#748dff;
+        }
+        *{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Rubik',sans-serif;
+  }
+  body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fbfafd;
+   
+  }
+ .container{
+    width:300px;
+    height: 360px;
+    background-color: #ffff;
+     border:1px solid #f9f9f9;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-content: center;
+     text-align: center;
+     box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+     cursor: pointer;
+     transition: box-shadow 0.5s ease;
+   
+ }
+ .container:hover{
+    box-shadow: 0px 0px 25px 10px rgba(50,50,93,0.1);
+ }
+ img{
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px  rgba(84,110,122,1);
+   
+ }
+   
+h2{
+font-size: 1.2rem;
+
+}
+ 
+ h4{
+     color:#999;
+     font-weight: 500;
+ }
+ button{
+    width:160px;
+     height:56px;
+     border-radius: 5px;
+     font-size: 16px;
+     font-weight: 500;
+     background-color:transparent;
+     color:#999;
+     border:1px solid #dedede;
+     cursor: pointer;
+margin: 0 auto;
+     box-shadow:0px 10px 20px -5px rgba(0,0,0,0.1);
+     
+ }
+ 
+ button:hover{
+    background-color:hsl(154, 59%, 51%);
+    border:1px solid hsl(154, 59%, 51%);
+    color:white;
+    transition: all 0.5s ease;
+    
+   }
+   .up{
+       z-index: 5;
+       transform: scale(1.10);
+   }
+   .active{
+        color:#ffff;
+        border:1px solid var(--btn-clr);
+        box-shadow:0px 7px 7px -6px var(--btn-clr);
+       background-color: var(--btn-clr);
+   }
+    </style>
+</head>
+<body>
+
+    <div class="container" >
+        <figure>
+            <img src="images/profile-1.jpg" alt="avatar" data-tilt>
+        </figure>
+        <h2>UX/UI Designer</h2>
+            <h4>Ravi Tyagi</h4>
+            <button type="submit" >Connect</button>
+      
+    </div>
+    <div class="container up">
+           <figure>
+               <img src="images/profile-2.jpg"  data-tilt  alt="avatar">
+           </figure>
+           <h2>Frontend Developer</h2>
+            <h4>Adarsh Sharma</h4>
+         
+         
+            <button type="submit" class="active">Connect</button>
+      
+    </div>
+    <div class="container">
+            <figure>
+                    <img src="images/profile-3.jpg" data-tilt alt="avatar">
+                </figure>
+                <h2>FullStack Developer</h2>
+            <h4>Priyanka Gupta</h4>
+                     
+            <button type="submit" >Connect</button>
+      
+    </div>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="tilt.jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+  $('img').tilt({
+      maxTilt:25,
+      speed:400,
+      glare:true,
+      maxGlare:.4,
+      easing: "cubic-bezier(.03,.98,.52,.99)"
+     
+    
+  });
+
+  });
+  </script>
+</body>
+</html>
